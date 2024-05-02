@@ -26,23 +26,46 @@ struct HomeVC: View {
     }
     
     private func barberInfoRow(_ barber: Barber) -> some View{
-        VStack{
-            HStack{
-                Image(systemName:"person.crop.circle")
-                    .resizable()
-                    .frame(width: 50, height: 50)
+        
+//        VStack{
+//            HStack{
+//                Image(systemName:"person.crop.circle")
+//                    .resizable()
+//                    .frame(width: 50, height: 50)
+//                .padding()
+//                Text(barber.name)
+//                    .font(.largeTitle)
+//                    .fontWeight(.semibold)
+//                
+//                
+//            }
+//            HStack{
+//                Image(systemName: "star.fill")
+//                Text("Rating: \(barber.rating)")
+//            }
+//        }
+        
+        HStack {
+            
+            Image(systemName: "person.crop.circle")
+                .resizable()
+                .frame(width: 50, height: 50)
                 .padding()
+            
+            VStack(alignment: .leading) {
+                
                 Text(barber.name)
                     .font(.largeTitle)
                     .fontWeight(.semibold)
                 
-                
-            }
-            HStack{
-                Image(systemName: "star.fill")
-                Text("Rating: \(barber.rating)")
+                HStack {
+                    Image(systemName: "star.fill")
+                    Text("Rating: \(barber.rating)")
+                    
+                }
             }
         }
+        
     }
 }
 
