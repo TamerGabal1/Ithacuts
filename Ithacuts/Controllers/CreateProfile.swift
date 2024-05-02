@@ -1,37 +1,34 @@
 //
-//  ProfileSignIn.swift
+//  CreateProfile.swift
 //  Ithacuts
 //
-//  Created by Tamer Gabal on 4/28/24.
+//  Created by Tamer Gabal on 5/1/24.
 //
 
 import SwiftUI
 
-struct ProfileSignIn: View {
+struct CreateProfile: View {
+    @Environment(\.presentationMode) var presentationMode
     @State private var username: String = ""
     @State private var password: String = ""
-    @EnvironmentObject var userAuth: UserAuth
+    @State private var accountType: String = ""
     
     var body: some View {
         NavigationStack{
             VStack{
                 header
+                Spacer()
+                    .frame(height: 20)
+                createProfileHeader
                 VStack{
                     Spacer()
                         .frame(height: 50)
                     loginField
                     Spacer()
                         .frame(height: 40)
-                    signInButton
+                    createProfileButton
                     Spacer()
                         .frame(height: 20)
-                    NavigationLink{
-                        CreateProfile()
-                    } label: {
-                        signUpButton
-                    }
-                    
-                    Text("\(userAuth.signedIn)")
                 }
                 .padding()
                 .font(.headline)
@@ -43,6 +40,11 @@ struct ProfileSignIn: View {
         Text("Welcome To \n  ITHACUTS")
             .font(.title2)
             .fontWeight(.bold)
+    }
+    
+    private var createProfileHeader: some View{
+        Text("Create Profile")
+            .font(.title3)
     }
     
     private var loginField: some View{
@@ -65,35 +67,37 @@ struct ProfileSignIn: View {
                 .background(.gray)
                 .clipShape(RoundedRectangle(cornerRadius: 16))
                 .padding(.horizontal, 35)
+            List{
+                Picker("Choose Your Account Type", selection: $accountType){
+                    Text("Standard User")
+                    Text("Student Barber")
+                    Text("Business")
+                }
+                .padding()
+            }
+            .padding()
         }
     }
     
-    private var signInButton: some View{
+    private var createProfileButton: some View{
         Button() {
-            signIn()
+            createProfile()
         } label: {
-            Text("Sign In")
+            Text("Create Profile")
                 .font(.title2)
                 .padding()
-                .padding(.horizontal, 95)
+                .padding(.horizontal, 65)
                 .background(.black)
                 .clipShape(RoundedRectangle(cornerRadius: 16))
                 .foregroundColor(.white)
         }
     }
     
-    private var signUpButton: some View{
-        Text("Don't have an account? Sign Up!")
-            .padding()
-            .background(.black)
-            .clipShape(RoundedRectangle(cornerRadius: 16))
-            .foregroundColor(.white)
-    }
-    
-    private func signIn(){
-        //TODO: Implement sign in functionality
+    private func createProfile(){
+        //TODO: Implement creating profile functionality
         
-        //Once signed in, go to ProfileVC
-        userAuth.signedIn = true
+        //Once profile created, go back to sign in page
+        presentationMode.wrappedValue.dismiss()
     }
 }
+

@@ -10,7 +10,7 @@ import SwiftUI
 struct ProfileVC: View {
     var body: some View {
         VStack{
-            
+            Text("Profile Page")
         }
     }
 }

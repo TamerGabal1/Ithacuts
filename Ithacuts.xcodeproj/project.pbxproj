@@ -17,6 +17,9 @@
 		556AEA852BDEE0EC00A577F6 /* BusinessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556AEA842BDEE0EC00A577F6 /* BusinessVC.swift */; };
 		556AEA872BDEE4C200A577F6 /* Barber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556AEA862BDEE4C200A577F6 /* Barber.swift */; };
 		556AEA8A2BDEE66900A577F6 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556AEA892BDEE66900A577F6 /* Comment.swift */; };
+		556AEA8C2BE2D1D700A577F6 /* CreateProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556AEA8B2BE2D1D700A577F6 /* CreateProfile.swift */; };
+		556AEA8E2BE3046D00A577F6 /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556AEA8D2BE3046D00A577F6 /* UserAuth.swift */; };
+		556AEA902BE40B9400A577F6 /* BarberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556AEA8F2BE40B9400A577F6 /* BarberVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		556AEA842BDEE0EC00A577F6 /* BusinessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessVC.swift; sourceTree = "<group>"; };
 		556AEA862BDEE4C200A577F6 /* Barber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Barber.swift; sourceTree = "<group>"; };
 		556AEA892BDEE66900A577F6 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		556AEA8B2BE2D1D700A577F6 /* CreateProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfile.swift; sourceTree = "<group>"; };
+		556AEA8D2BE3046D00A577F6 /* UserAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuth.swift; sourceTree = "<group>"; };
+		556AEA8F2BE40B9400A577F6 /* BarberVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarberVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +53,7 @@
 		556AEA612BDED25F00A577F6 = {
 			isa = PBXGroup;
 			children = (
+				556AEA8D2BE3046D00A577F6 /* UserAuth.swift */,
 				556AEA6C2BDED25F00A577F6 /* Ithacuts */,
 				556AEA6B2BDED25F00A577F6 /* Products */,
 			);
@@ -88,6 +95,8 @@
 				556AEA802BDED55B00A577F6 /* ProfileVC.swift */,
 				556AEA822BDEDA5000A577F6 /* ProfileSignIn.swift */,
 				556AEA842BDEE0EC00A577F6 /* BusinessVC.swift */,
+				556AEA8B2BE2D1D700A577F6 /* CreateProfile.swift */,
+				556AEA8F2BE40B9400A577F6 /* BarberVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -171,11 +180,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				556AEA8E2BE3046D00A577F6 /* UserAuth.swift in Sources */,
 				556AEA812BDED55B00A577F6 /* ProfileVC.swift in Sources */,
 				556AEA7F2BDED54E00A577F6 /* HomeVC.swift in Sources */,
+				556AEA902BE40B9400A577F6 /* BarberVC.swift in Sources */,
 				556AEA702BDED25F00A577F6 /* ContentView.swift in Sources */,
 				556AEA6E2BDED25F00A577F6 /* IthacutsApp.swift in Sources */,
 				556AEA872BDEE4C200A577F6 /* Barber.swift in Sources */,
+				556AEA8C2BE2D1D700A577F6 /* CreateProfile.swift in Sources */,
 				556AEA852BDEE0EC00A577F6 /* BusinessVC.swift in Sources */,
 				556AEA8A2BDEE66900A577F6 /* Comment.swift in Sources */,
 				556AEA832BDEDA5000A577F6 /* ProfileSignIn.swift in Sources */,

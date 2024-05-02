@@ -9,13 +9,19 @@ import SwiftUI
 
 struct HomeVC: View {
     var body: some View {
-        VStack{
-            Text("Home View")
-                .padding()
-            List(barbers, id: \.self) { barber in
-                barberInfoRow(barber)
+        NavigationStack{
+            VStack{
+                Text("Home View")
+                    .padding()
+                List(barbers, id: \.self) { barber in
+                    NavigationLink{
+                        BarberVC(barber: barber)
+                    } label: {
+                        barberInfoRow(barber)
+                    }
+                }
+                .navigationTitle("Barbers List")
             }
-            .navigationTitle("Birds List")
         }
     }
     

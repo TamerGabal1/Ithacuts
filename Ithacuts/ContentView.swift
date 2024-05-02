@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var selectedTab = 0
-    @State private var signedIn = false
+    @StateObject private var userAuth = UserAuth()
     
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -25,7 +25,7 @@ struct ContentView: View {
                 }
                 .tag(1)
             Group{
-                if(!signedIn){
+                if(!userAuth.signedIn){
                     ProfileSignIn()
                 }
                 else{
@@ -37,9 +37,11 @@ struct ContentView: View {
                 }
                 .tag(2)
         }
+        .environmentObject(userAuth)
     }
 }
 
 #Preview {
     ContentView()
+        .environmentObject(UserAuth())
 }
