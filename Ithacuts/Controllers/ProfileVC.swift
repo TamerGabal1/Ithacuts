@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ProfileVC: View {
     var body: some View {
+        
+        // profilePage()
                         
         VStack{
             Text("Profile Page")
