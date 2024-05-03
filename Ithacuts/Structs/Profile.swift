@@ -16,5 +16,5 @@ struct Profile: Hashable {
 }
 
 var profiles = [
-    Profile(username: "MadN00bSmoke", age: 10, preference: "mens hair", hairStyle: "3A", profilePhoto: ["xbox.logo"])
+    Profile(username: "MadN00bSmoke", age: 10, preference: "Mens Hair", hairStyle: "3A", profilePhoto: ["xbox.logo"])
 ]

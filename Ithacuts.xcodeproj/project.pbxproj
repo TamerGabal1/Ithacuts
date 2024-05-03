@@ -21,6 +21,7 @@
 		556AEA8E2BE3046D00A577F6 /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556AEA8D2BE3046D00A577F6 /* UserAuth.swift */; };
 		556AEA902BE40B9400A577F6 /* BarberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556AEA8F2BE40B9400A577F6 /* BarberVC.swift */; };
 		E87EC7C02BE44DD8007D3EFC /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87EC7BF2BE44DD8007D3EFC /* Profile.swift */; };
+		E87EC7C22BE4CBEE007D3EFC /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87EC7C12BE4CBEE007D3EFC /* EditProfileVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		556AEA8D2BE3046D00A577F6 /* UserAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuth.swift; sourceTree = "<group>"; };
 		556AEA8F2BE40B9400A577F6 /* BarberVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarberVC.swift; sourceTree = "<group>"; };
 		E87EC7BF2BE44DD8007D3EFC /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		E87EC7C12BE4CBEE007D3EFC /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			children = (
 				556AEA7E2BDED54E00A577F6 /* HomeVC.swift */,
 				556AEA802BDED55B00A577F6 /* ProfileVC.swift */,
+				E87EC7C12BE4CBEE007D3EFC /* EditProfileVC.swift */,
 				556AEA822BDEDA5000A577F6 /* ProfileSignIn.swift */,
 				556AEA842BDEE0EC00A577F6 /* BusinessVC.swift */,
 				556AEA8B2BE2D1D700A577F6 /* CreateProfile.swift */,
@@ -195,6 +198,7 @@
 				556AEA852BDEE0EC00A577F6 /* BusinessVC.swift in Sources */,
 				556AEA8A2BDEE66900A577F6 /* Comment.swift in Sources */,
 				556AEA832BDEDA5000A577F6 /* ProfileSignIn.swift in Sources */,
+				E87EC7C22BE4CBEE007D3EFC /* EditProfileVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

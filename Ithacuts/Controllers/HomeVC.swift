@@ -11,8 +11,8 @@ struct HomeVC: View {
     var body: some View {
         NavigationStack{
             VStack{
-                Text("Home View")
-                    .padding()
+                Spacer()
+//                Text("Home View")
                 List(barbers, id: \.self) { barber in
                     NavigationLink{
                         BarberVC(barber: barber)

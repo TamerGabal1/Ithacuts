@@ -97,3 +97,4 @@ struct ProfileSignIn: View {
         userAuth.signedIn = true
     }
 }
+
