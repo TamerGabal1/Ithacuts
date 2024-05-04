@@ -18,7 +18,7 @@ struct BarberVC: View {
             
             barberPhotos
         }
-        .navigationTitle("Barber")
+//        .navigationTitle("Barber")
     }
 }
 
@@ -49,30 +49,30 @@ private func barberPage(_ barber: Barber) -> some View {
             Spacer()
         }
         
-        Text("Contact: ")
+        Text("Bio: \(barber.bio)")
             .font(.title2)
             .fontWeight(.medium)
             .padding(.top, 10)
             .padding(.leading, 30)
         
-//        Text("Rating: \(barber.rating)")
+        Text("Contacts: \(barber.contacts)")
+            .font(.title2)
+            .fontWeight(.medium)
+            .padding(.top, 5)
+            .padding(.leading, 30)
+        
+        Text("Comments: \(barber.comments)")
+            .font(.title2)
+            .fontWeight(.medium)
+            .padding(.top, 5)
+            .padding(.leading, 30)
+        
+//        Text("Skills/Experience: ")
 //            .font(.title2)
 //            .fontWeight(.medium)
 //            .padding(.top, 5)
 //            .padding(.leading, 30)
-        
-        Text("Location: ")
-            .font(.title2)
-            .fontWeight(.medium)
-            .padding(.top, 5)
-            .padding(.leading, 30)
-        
-        Text("Skills/Experience: ")
-            .font(.title2)
-            .fontWeight(.medium)
-            .padding(.top, 5)
-            .padding(.leading, 30)
-            .padding(.bottom, 15)
+//            .padding(.bottom, 15)
 
         Spacer()
         
