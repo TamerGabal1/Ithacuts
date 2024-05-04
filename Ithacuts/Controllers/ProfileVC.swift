@@ -58,19 +58,19 @@ private func profilePage(_ profile: Profile) -> some View {
             Spacer()
         }
         
-        Text("Age: \(profile.age)")
+        Text("Age: \(profile.age ?? 0)")
             .font(.title2)
             .fontWeight(.medium)
             .padding(.top, 10)
             .padding(.leading, 30)
         
-        Text("Preference: \(profile.preference)")
+        Text("Preference: \(profile.preference ?? "")")
             .font(.title2)
             .fontWeight(.medium)
             .padding(.top, 5)
             .padding(.leading, 30)
         
-        Text("Hair Style: \(profile.hairStyle)")
+        Text("Hair Style: \(profile.hairStyle ?? "")")
             .font(.title2)
             .fontWeight(.medium)
             .padding(.top, 5)
