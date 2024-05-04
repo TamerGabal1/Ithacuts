@@ -13,8 +13,10 @@ struct Profile: Codable, Equatable, Hashable {
     let preference: String?
     let hairStyle: String?
     let profilePhoto: [String]?
+    let email: String
+    let phoneNumber: String
 }
 
 var profiles = [
-    Profile(username: "MadN00bSmoke", age: 10, preference: "Mens Hair", hairStyle: "3A", profilePhoto: ["xbox.logo"])
+    Profile(username: "Sample User", age: 19, preference: "Mens Hair", hairStyle: "Mens, 1C", profilePhoto: ["xbox.logo"], email: "abc123@cornell.edu", phoneNumber: "(123) 456-7890")
 ]

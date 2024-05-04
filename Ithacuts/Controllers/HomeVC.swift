@@ -9,8 +9,15 @@ struct HomeVC: View {
             VStack{
                 
                 Image("ithacut_png")
+                    .resizable()
+                    .frame(width: 75, height: 75)
+                
+                Text("Barbers List")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
                 
                 Spacer()
+                
                 List(barbers, id: \.id) { barber in
                     NavigationLink{
                         BarberVC(barber: barber)
@@ -18,7 +25,6 @@ struct HomeVC: View {
                         barberInfoRow(barber)
                     }
                 }
-                .navigationTitle("Barbers List")
             }
             .onAppear{
                 fetchBarbers()
