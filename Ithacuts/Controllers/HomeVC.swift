@@ -7,6 +7,9 @@ struct HomeVC: View {
     var body: some View {
         NavigationStack{
             VStack{
+                
+                Image("ithacut_png")
+                
                 Spacer()
                 List(barbers, id: \.id) { barber in
                     NavigationLink{

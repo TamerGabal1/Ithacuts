@@ -251,3 +251,10 @@ private func postsInRow(_ post: Post) -> some View {
         }
     }
 }
+
+//struct BarberVC_Previews: PreviewProvider {
+//    static var previews: some View {
+//        BarberVC()
+//    }
+//}
+

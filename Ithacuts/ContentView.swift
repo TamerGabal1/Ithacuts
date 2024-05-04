@@ -13,36 +13,60 @@ struct ContentView: View {
     
     var body: some View {
         
-            TabView(selection: $selectedTab) {
+        if !userAuth.signedIn {
+            ProfileSignIn()
+                .environmentObject(userAuth)
+                .onReceive(userAuth.$signedIn) {signedIn in if signedIn {
+                    userAuth.objectWillChange.send()
+                }
+            }
+        } else {
+            TabView {
                 HomeVC()
                     .tabItem {
-                        Label("Students", systemImage: "house")
+                        Label("Students", systemImage:"house")
                     }
                     .tag(0)
-//                    
-//                BusinessVC()
-//                    .tabItem {
-//                        Label("Business", systemImage: "briefcase")
-//                    }
-//                    .tag(1)
-                Group{
-                    if(!userAuth.signedIn){
-                        ProfileSignIn()
-                    }
-                    else{
-                        ProfileVC()
-                    }
-                }
+                
+                ProfileVC()
                     .tabItem {
                         Label("Profile", systemImage: "person.crop.circle")
                     }
                     .tag(1)
             }
             .environmentObject(userAuth)
+        }
+        
+        
+//            TabView(selection: $selectedTab) {
+//                HomeVC()
+//                    .tabItem {
+//                        Label("Students", systemImage: "house")
+//                    }
+//                    .tag(0)
+////                    
+////                BusinessVC()
+////                    .tabItem {
+////                        Label("Business", systemImage: "briefcase")
+////                    }
+////                    .tag(1)
+//                Group{
+//                    if(!userAuth.signedIn){
+//                        ProfileSignIn()
+//                    }
+//                    else{
+//                        ProfileVC()
+//                    }
+//                }
+//                    .tabItem {
+//                        Label("Profile", systemImage: "person.crop.circle")
+//                    }
+//                    .tag(1)
+//            }
+//            .environmentObject(userAuth)
     }
 }
 
 #Preview {
     ContentView()
-        .environmentObject(UserAuth())
 }
