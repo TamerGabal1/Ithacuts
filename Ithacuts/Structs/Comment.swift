@@ -8,7 +8,9 @@
 import Foundation
 
 struct Comment: Codable, Equatable, Hashable {
-    let user: String
-    let body: String
-    let image: String?
+    let description: String
+    let id: Int
+    let post: Post
+    let post_id: Int
+    let user_id: Int
 }

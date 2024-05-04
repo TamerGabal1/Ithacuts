@@ -19,6 +19,7 @@ class NetworkManager{
     
     func getBarbers(completion: @escaping ([Barber]) -> Void){
         
+//        print(devEndpoint + "/api/users")
         AF.request(devEndpoint + "/api/users", method:.get)
             .validate()
             .responseDecodable(of: [Barber].self, decoder: decoder){ response in
@@ -27,7 +28,7 @@ class NetworkManager{
                     print(barbers)
                     completion(barbers)
                 case .failure(let error):
-                    print("Error in NetworkManager.getBarber: \(error.localizedDescription)")
+                    print("Error in NetworkManager.getBarber: \(error)")
                     completion([])
                 }
             }

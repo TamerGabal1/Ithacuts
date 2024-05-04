@@ -8,12 +8,6 @@ struct HomeVC: View {
         NavigationStack{
             VStack{
                 Spacer()
-//                Text("Home View")
-                Button(){
-                    fetchBarbers()
-                } label: {
-                    Text("Fetch Barbers")
-                }
                 List(barbers, id: \.id) { barber in
                     NavigationLink{
                         BarberVC(barber: barber)
@@ -23,17 +17,17 @@ struct HomeVC: View {
                 }
                 .navigationTitle("Barbers List")
             }
-            .onAppear(){
+            .onAppear{
                 fetchBarbers()
             }
         }
     }
     
-    func fetchBarbers() {
+    private func fetchBarbers() {
         NetworkManager.shared.getBarbers { newBarbers in
             DispatchQueue.main.async {
                 print(newBarbers)
-                self.barbers = newBarbers
+                barbers = newBarbers
             }
         }
     }

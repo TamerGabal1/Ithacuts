@@ -10,7 +10,7 @@ import Foundation
 struct Post: Codable, Equatable, Hashable{
     let description: String
     let id: Int
-    let image_path: String
+    let image_path: String?
     let title: String
     let user_id: Int
 }

@@ -12,14 +12,66 @@ struct Barber: Codable, Hashable{
     let comments: [Comment]
     let contacts: String
     let id: Int
-    let posts: [Post]
-    let receiver_reviews: [Review]
+    let posts: [Post]?
+    let received_reviews: [Review]
     let username: String
 }
 
-//var barbers = [
-//    Barber(name: "Tamer", profileImage: "figure.wave", bio: "your mom", images: ["bolt.fill"], rating: 7, comments: [Comment(user: "yo momma", body: "asdfgh", image: nil)]),
-//    Barber(name: "Paul", profileImage: "figure", bio: "womp womp", images: ["righttriangle"], rating: 4, comments: [Comment(user: "yo daddy", body: "kjl;khbj m", image: nil)]),
-//    Barber(name: "Tyler", profileImage: "figure.walk", bio: "pee pee", images: ["lock.doc"], rating: 10, comments: [Comment(user: "yo brother", body: "poo poo", image: nil)]),
-//    Barber(name: "Ian", profileImage: "figure.stand", bio: "goo goo", images: ["network"], rating: 8, comments: [Comment(user: "yo sister", body: "kjohioguh", image: nil)]),
+//[
+//    {
+//        "bio": "guy",
+//        "comments": [],
+//        "contacts": "702",
+//        "id": 1,
+//        "posts": [
+//            {
+//                "description": "look at my latest haircut",
+//                "id": 1,
+//                "image_path": null,
+//                "title": "new cut",
+//                "user_id": 1
+//            }
+//        ],
+//        "received_reviews": [],
+//        "reviews": [
+//            {
+//                "description": "does nice haircuts",
+//                "id": 1,
+//                "receiver_id": 2,
+//                "sender_id": 1
+//            }
+//        ],
+//        "username": "tey6"
+//    },
+//    {
+//        "bio": "fella",
+//        "comments": [
+//            {
+//                "description": "youre a great person",
+//                "id": 1,
+//                "post": {
+//                    "description": "look at my latest haircut",
+//                    "id": 1,
+//                    "image_path": null,
+//                    "title": "new cut",
+//                    "user_id": 1
+//                },
+//                "post_id": 1,
+//                "user_id": 2
+//            }
+//        ],
+//        "contacts": "914",
+//        "id": 2,
+//        "posts": [],
+//        "received_reviews": [
+//            {
+//                "description": "does nice haircuts",
+//                "id": 1,
+//                "receiver_id": 2,
+//                "sender_id": 1
+//            }
+//        ],
+//        "reviews": [],
+//        "username": "iju2"
+//    }
 //]
