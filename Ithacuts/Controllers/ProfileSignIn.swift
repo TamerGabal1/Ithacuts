@@ -30,8 +30,6 @@ struct ProfileSignIn: View {
                     } label: {
                         signUpButton
                     }
-                    
-                    Text("\(userAuth.signedIn)")
                 }
                 .padding()
                 .font(.headline)

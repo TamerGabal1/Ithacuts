@@ -28,7 +28,7 @@ private func barberPage(_ barber: Barber) -> some View {
         
         HStack {
             
-            Image(systemName: "playstation.logo")
+            Image(systemName: "scissors")
                 .resizable()
                 .frame(width: 100, height: 100)
                 .padding(.leading, 25)
@@ -61,11 +61,25 @@ private func barberPage(_ barber: Barber) -> some View {
             .padding(.top, 5)
             .padding(.leading, 30)
         
-        Text("Comments: \(barber.comments)")
+        Spacer()
+            .frame(height: 20)
+        Text("Comments:")
             .font(.title2)
             .fontWeight(.medium)
             .padding(.top, 5)
             .padding(.leading, 30)
+        List(barber.comments, id: \.id) { comment in
+            commentInRow(comment)
+                .font(.title2)
+                .fontWeight(.medium)
+                .padding(.top, 5)
+                .padding(.leading, 30)
+        }
+//        .navigationTitle("Comments:")
+//            .font(.title2)
+//            .fontWeight(.medium)
+//            .padding(.top, 5)
+//            .padding(.leading, 30)
         
 //        Text("Skills/Experience: ")
 //            .font(.title2)
@@ -95,6 +109,10 @@ private var barberPhotos: some View {
         // put the collectionview of the photos here
             
     }
+}
+
+private func commentInRow(_ comment: Comment) -> some View{
+    Text("\(comment.description)")
 }
 
 //

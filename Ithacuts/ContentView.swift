@@ -19,12 +19,12 @@ struct ContentView: View {
                         Label("Students", systemImage: "house")
                     }
                     .tag(0)
-                    
-                BusinessVC()
-                    .tabItem {
-                        Label("Business", systemImage: "briefcase")
-                    }
-                    .tag(1)
+//                    
+//                BusinessVC()
+//                    .tabItem {
+//                        Label("Business", systemImage: "briefcase")
+//                    }
+//                    .tag(1)
                 Group{
                     if(!userAuth.signedIn){
                         ProfileSignIn()
@@ -36,7 +36,7 @@ struct ContentView: View {
                     .tabItem {
                         Label("Profile", systemImage: "person.crop.circle")
                     }
-                    .tag(2)
+                    .tag(1)
             }
             .environmentObject(userAuth)
     }
