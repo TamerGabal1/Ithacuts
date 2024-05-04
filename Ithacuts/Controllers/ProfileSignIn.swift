@@ -18,29 +18,26 @@ struct ProfileSignIn: View {
                 
                 header
                 
-                VStack{
+                loginField
                     
-                    loginField
+                Spacer()
+                    .frame(height: 20)
                     
-                    Spacer()
-                        .frame(height: 20)
+                signInButton
                     
-                    signInButton
+                Spacer()
+                    .frame(height: 15)
                     
-                    Spacer()
-                        .frame(height: 15)
-                    
-                    NavigationLink{
-                        CreateProfile()
-                    } label: {
-                        signUpButton
-                    }
-                    
+                NavigationLink{
+                    CreateProfile()
+                } label: {
+                    signUpButton
                 }
-                .padding(.horizontal)
-                .font(.headline)
-                .padding(.bottom, 20)
+                    
+            .font(.headline)
             }
+            .padding(.horizontal)
+
         }
     }
     
@@ -54,8 +51,8 @@ struct ProfileSignIn: View {
                 .clipShape(RoundedRectangle(cornerRadius: 15))
                 .padding(.top, 50)
             
-            Text("Welcome to")
-                .font(.title)
+//            Text("Welcome to")
+//                .font(.title)
             
             Text("ITHACUTS")
                 .font(.largeTitle)

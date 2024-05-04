@@ -14,57 +14,85 @@ struct CreateProfile: View {
     @State private var accountType: String = ""
     
     var body: some View {
+        
         NavigationStack{
+            
             VStack{
+                
                 header
+                    .padding(.top, 40)
+                
                 Spacer()
-                    .frame(height: 20)
+                    .frame(height: 60)
+                
                 createProfileHeader
-                VStack{
-                    Spacer()
-                        .frame(height: 50)
-                    loginField
-                    Spacer()
-                        .frame(height: 40)
-                    createProfileButton
+                                    
                     Spacer()
                         .frame(height: 20)
-                }
+                    
+                    loginField
+                    
+                    Spacer()
+                        .frame(height: 40)
+                    
+                    createProfileButton
+                    
+                    Spacer()
+                        .frame(height: 30)
+                
                 .padding()
                 .font(.headline)
             }
+            .padding(.horizontal)
         }
     }
+
+    
+    
     
     private var header: some View{
-        Text("Welcome To \n  ITHACUTS")
-            .font(.title2)
-            .fontWeight(.bold)
+        
+        HStack(alignment: .center) {
+            Text("Welcome To")
+                .font(.title)
+                .fontWeight(.semibold)
+            
+            Text("ITHACUTS")
+                .font(.title)
+                .fontWeight(.bold)
+                .foregroundStyle(Color(hex: "#F99417"))
+        }
+        
     }
     
     private var createProfileHeader: some View{
         Text("Create Profile")
-            .font(.title3)
+            .font(.title2)
+            .fontWeight(.bold)
     }
     
     private var loginField: some View{
         VStack{
             Text("Username")
-                .padding(.trailing, 210)
+                .padding(.trailing, 200)
+                .font(.title3)
+                .fontWeight(.semibold)
             TextField("", text: $username)
                 .padding()
-                .background(.gray)
+                .background(Color(hex: "#8D8D92"))
                 .clipShape(RoundedRectangle(cornerRadius: 16))
                 .padding(.horizontal, 35)
             
             Spacer()
-                .frame(height: 50)
+                .frame(height: 10)
             
             Text("Password")
-                .padding(.trailing, 210)
+                .padding(.trailing, 200)
+                .font(.title3)
+                .fontWeight(.semibold)
             TextField("", text: $password)
                 .padding()
-                .background(.gray)
+                .background(Color(hex: "#8D8D92"))
                 .clipShape(RoundedRectangle(cornerRadius: 16))
                 .padding(.horizontal, 35)
             List{
@@ -75,7 +103,7 @@ struct CreateProfile: View {
                 }
                 .padding()
             }
-            .padding()
+            .padding(.horizontal)
         }
     }
     
@@ -85,9 +113,10 @@ struct CreateProfile: View {
         } label: {
             Text("Create Profile")
                 .font(.title2)
+                .fontWeight(.semibold)
                 .padding()
                 .padding(.horizontal, 65)
-                .background(.black)
+                .background(Color(hex: "#363062"))
                 .clipShape(RoundedRectangle(cornerRadius: 16))
                 .foregroundColor(.white)
         }
@@ -101,3 +130,8 @@ struct CreateProfile: View {
     }
 }
 
+struct CreateProfile_Previews: PreviewProvider {
+    static var previews: some View {
+        CreateProfile()
+    }
+}
