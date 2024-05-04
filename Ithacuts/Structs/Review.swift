@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Review: Codable, Equatable, Hashable{
+struct Review: Codable, Equatable, Hashable, CustomStringConvertible, Identifiable{
     let description: String
     let id: Int
     let receiver_id: Int

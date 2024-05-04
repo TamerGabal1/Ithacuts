@@ -26,7 +26,8 @@ struct HomeVC: View {
     private func fetchBarbers() {
         NetworkManager.shared.getBarbers { newBarbers in
             DispatchQueue.main.async {
-                print(newBarbers)
+//                print("Space")
+//                print(newBarbers)
                 barbers = newBarbers
             }
         }
@@ -53,7 +54,6 @@ struct HomeVC: View {
 //                Text("Rating: \(barber.rating)")
 //            }
 //        }
-        
         HStack {
             
             Image(systemName: "person.crop.circle")
@@ -62,7 +62,6 @@ struct HomeVC: View {
                 .padding()
             
             VStack(alignment: .leading) {
-                
                 Text(barber.username)
                     .font(.largeTitle)
                     .fontWeight(.semibold)

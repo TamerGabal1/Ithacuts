@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Post: Codable, Equatable, Hashable{
+struct Post: Codable, Equatable, Hashable, CustomStringConvertible, Identifiable{
     let description: String
     let id: Int
     let image_path: String?

@@ -90,6 +90,8 @@ struct ProfileSignIn: View {
     
     private func signIn(){
         //TODO: Implement sign in functionality
+        let profile = Profile(username: username, age: nil, preference: nil, hairStyle: nil, profilePhoto: nil)
+        
         
         //Once signed in, go to ProfileVC
         userAuth.signedIn = true

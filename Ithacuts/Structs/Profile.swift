@@ -9,10 +9,10 @@ import Foundation
 
 struct Profile: Codable, Equatable, Hashable {
     let username: String
-    let age: Int
-    let preference: String
-    let hairStyle: String
-    let profilePhoto: [String]
+    let age: Int?
+    let preference: String?
+    let hairStyle: String?
+    let profilePhoto: [String]?
 }
 
 var profiles = [
