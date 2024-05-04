@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Comment: Hashable {
+struct Comment: Codable, Equatable, Hashable {
     let user: String
     let body: String
     let image: String?

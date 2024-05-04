@@ -1,19 +1,20 @@
-//
-//  HomeVC.swift
-//  Ithacuts
-//
-//  Created by Tamer Gabal on 4/28/24.
-//
 
 import SwiftUI
 
 struct HomeVC: View {
+    @State var barbers: [Barber] = []
+    
     var body: some View {
         NavigationStack{
             VStack{
                 Spacer()
 //                Text("Home View")
-                List(barbers, id: \.self) { barber in
+                Button(){
+                    fetchBarbers()
+                } label: {
+                    Text("Fetch Barbers")
+                }
+                List(barbers, id: \.id) { barber in
                     NavigationLink{
                         BarberVC(barber: barber)
                     } label: {
@@ -22,8 +23,22 @@ struct HomeVC: View {
                 }
                 .navigationTitle("Barbers List")
             }
+            .onAppear(){
+                fetchBarbers()
+            }
         }
     }
+    
+    func fetchBarbers() {
+        NetworkManager.shared.getBarbers { newBarbers in
+            DispatchQueue.main.async {
+                print(newBarbers)
+                self.barbers = newBarbers
+            }
+        }
+    }
+
+    
     
     private func barberInfoRow(_ barber: Barber) -> some View{
         
@@ -54,15 +69,15 @@ struct HomeVC: View {
             
             VStack(alignment: .leading) {
                 
-                Text(barber.name)
+                Text(barber.username)
                     .font(.largeTitle)
                     .fontWeight(.semibold)
                 
-                HStack {
-                    Image(systemName: "star.fill")
-                    Text("Rating: \(barber.rating)")
-                    
-                }
+//                HStack {
+//                    Image(systemName: "star.fill")
+//                    Text("Rating: \(barber.rating)")
+//                    
+//                }
             }
         }
         

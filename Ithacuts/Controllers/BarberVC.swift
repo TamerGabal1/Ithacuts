@@ -40,7 +40,7 @@ private func barberPage(_ barber: Barber) -> some View {
                     .font(.largeTitle)
                     .fontWeight(.semibold)
                 
-                Text(barber.name)
+                Text(barber.username)
                     .font(.largeTitle)
                     .fontWeight(.semibold)
                 
@@ -55,11 +55,11 @@ private func barberPage(_ barber: Barber) -> some View {
             .padding(.top, 10)
             .padding(.leading, 30)
         
-        Text("Rating: \(barber.rating)")
-            .font(.title2)
-            .fontWeight(.medium)
-            .padding(.top, 5)
-            .padding(.leading, 30)
+//        Text("Rating: \(barber.rating)")
+//            .font(.title2)
+//            .fontWeight(.medium)
+//            .padding(.top, 5)
+//            .padding(.leading, 30)
         
         Text("Location: ")
             .font(.title2)
@@ -97,7 +97,7 @@ private var barberPhotos: some View {
     }
 }
 
-
-#Preview {
-    BarberVC(barber: barbers[0])
-}
+//
+//#Preview {
+//    BarberVC(barber: barbers[0])
+//}

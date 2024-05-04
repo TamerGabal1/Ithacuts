@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Profile: Hashable {
+struct Profile: Codable, Equatable, Hashable {
     let username: String
     let age: Int
     let preference: String
