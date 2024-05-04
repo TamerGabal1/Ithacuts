@@ -17,7 +17,7 @@ class NetworkManager{
     
     let decoder = JSONDecoder()
     
-    func getBarbers(completion: @escaping ([Barber]) -> Void){
+    func getBarbers(completion: @escaping ([Barber]) -> Void) {
         
 //        print(devEndpoint + "/api/users")
         AF.request(devEndpoint + "/api/users", method:.get)

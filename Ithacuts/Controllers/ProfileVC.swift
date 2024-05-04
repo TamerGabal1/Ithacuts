@@ -82,44 +82,44 @@ private func profilePage(_ profile: Profile) -> some View {
 }
 
 //private var profilePage: some View {
-//    
+//
 //    VStack(alignment: .leading) {
-//        
+//
 //        HStack {
-//            
+//
 //            Image(systemName: "xbox.logo")
 //                .resizable()
 //                .frame(width: 100, height: 100)
 //                .padding(.leading, 25)
 //                .padding(.trailing, 15)
-//            
+//
 //            VStack(alignment: .leading) {
-//                
+//
 //                Text("Hi,")
 //                    .font(.largeTitle)
 //                    .fontWeight(.semibold)
-//                
+//
 //                Text("User Name") // make the username reflect whatever was typed in the username text field
 //                    .font(.largeTitle)
 //                    .fontWeight(.semibold)
-//                
+//
 //            }
-//            
+//
 //            Spacer()
 //        }
-//        
+//
 //        Text("Age: ")
 //            .font(.title2)
 //            .fontWeight(.medium)
 //            .padding(.top, 10)
 //            .padding(.leading, 30)
-//        
+//
 //        Text("Preference: ")
 //            .font(.title2)
 //            .fontWeight(.medium)
 //            .padding(.top, 5)
 //            .padding(.leading, 30)
-//        
+//
 //        Text("Hair Style: ")
 //            .font(.title2)
 //            .fontWeight(.medium)
@@ -127,7 +127,7 @@ private func profilePage(_ profile: Profile) -> some View {
 //            .padding(.leading, 30)
 //
 //        Spacer()
-//        
+//
 //    }
 //}
 
