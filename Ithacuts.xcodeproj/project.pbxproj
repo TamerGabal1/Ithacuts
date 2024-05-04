@@ -112,12 +112,12 @@
 			isa = PBXGroup;
 			children = (
 				556AEA7E2BDED54E00A577F6 /* HomeVC.swift */,
+				556AEA8F2BE40B9400A577F6 /* BarberVC.swift */,
 				556AEA802BDED55B00A577F6 /* ProfileVC.swift */,
 				E87EC7C12BE4CBEE007D3EFC /* EditProfileVC.swift */,
 				556AEA822BDEDA5000A577F6 /* ProfileSignIn.swift */,
 				556AEA8B2BE2D1D700A577F6 /* CreateProfile.swift */,
 				556AEA842BDEE0EC00A577F6 /* BusinessVC.swift */,
-				556AEA8F2BE40B9400A577F6 /* BarberVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";

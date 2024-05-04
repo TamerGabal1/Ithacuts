@@ -161,24 +161,29 @@ struct BarberVC: View {
     
     var body: some View {
         ScrollView {
+            
             VStack {
+                
                 barberPage(barber)
             }
         }
-        .navigationTitle("Barber")
     }
 }
 
 private func barberPage(_ barber: Barber) -> some View {
+    
     VStack(alignment: .leading) {
+        
         HStack {
-            Image(systemName: "scissors")
+            
+            Image(systemName: "person.crop.circle")
                 .resizable()
                 .frame(width: 100, height: 100)
                 .padding(.leading, 25)
                 .padding(.trailing, 15)
             
             VStack(alignment: .leading) {
+                
                 Text("Barber:")
                     .font(.largeTitle)
                     .fontWeight(.semibold)
@@ -189,19 +194,82 @@ private func barberPage(_ barber: Barber) -> some View {
             }
             Spacer()
         }
+                    
+        VStack(alignment: .leading) {
+            
+            HStack(alignment: .top) {
+                
+                Image(systemName: "note.text")
+                    .resizable()
+                    .frame(width: 30, height: 30)
+                
+                Spacer()
+                    .frame(width: 10)
+                
+                Text("Bio:")
+                    .font(.title)
+                    .fontWeight(.medium)
+            }
+            
+            Text("\(barber.bio)")
+                .font(.title2)
+                .fontWeight(.regular)
+                .padding(.top, 3)
+                .padding(.leading, 15)
+        }
         
-        Text("Bio: \(barber.bio)")
-            .font(.title2)
-            .fontWeight(.medium)
-            .padding(.all, 10)
+        .padding(.leading, 30)
+        .padding(.top, 10)
         
-        sectionTitle("Posts")
+        
+        HStack {
+            
+            Image(systemName: "plus.circle")
+                .resizable()
+                .frame(width: 30, height: 30)
+            
+            Spacer()
+                .frame(width: 10)
+            
+            sectionTitle("Posts")
+        }
+        .padding(.leading, 30)
+        .padding(.top, 10)
+        
         dynamicList(items: barber.posts ?? [])
         
-        sectionTitle("Comments")
+        
+        HStack {
+            
+            Image(systemName: "text.bubble")
+                .resizable()
+                .frame(width: 30, height: 30)
+            
+            Spacer()
+                .frame(width: 10)
+            
+            sectionTitle("Comments")
+        }
+        .padding(.leading, 30)
+        .padding(.top, 10)
+
         dynamicList(items: barber.comments)
         
-        sectionTitle("Reviews")
+        
+        HStack {
+            
+            Image(systemName: "star.circle.fill")
+                .resizable()
+                .frame(width: 30, height: 30)
+            
+            Spacer()
+                .frame(width: 10)
+            
+            sectionTitle("Reviews")
+        }
+        .padding(.leading, 30)
+        .padding(.top, 10)
+        
         dynamicList(items: barber.received_reviews)
         
     }
@@ -209,21 +277,26 @@ private func barberPage(_ barber: Barber) -> some View {
 
 private func sectionTitle(_ text: String) -> some View {
     Text(text)
-        .font(.title2)
+        .font(.title)
         .fontWeight(.medium)
-        .padding(.horizontal, 30)
-        .padding(.top, 10)
 }
 
 private func dynamicList<T: Identifiable>(items: [T]) -> some View where T: CustomStringConvertible {
-    VStack {
+    VStack(alignment: .leading) {
         ForEach(items, id: \.id) { item in
             Text(item.description)
                 .font(.title3)
                 .fontWeight(.medium)
-                .padding(.all, 10)
+                .foregroundStyle(Color(hex: "#363062"))
+                .padding(.vertical, 5)
+                .padding(.horizontal, 10)
+                .background(Color(hex: "#F99417"))
+                .clipShape(RoundedRectangle(cornerRadius: 15))
+                .padding(.leading, 15)
+
         }
     }
+    .padding(.leading, 30)
 }
 
 private func commentInRow(_ comment: Comment) -> some View {
@@ -252,9 +325,7 @@ private func postsInRow(_ post: Post) -> some View {
     }
 }
 
-//struct BarberVC_Previews: PreviewProvider {
-//    static var previews: some View {
-//        BarberVC()
-//    }
-//}
+#Preview {
+    ContentView()
+}
 

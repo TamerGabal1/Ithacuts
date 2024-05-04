@@ -10,7 +10,6 @@ import Foundation
 struct Profile: Codable, Equatable, Hashable {
     let username: String
     let age: Int?
-    let preference: String?
     let hairStyle: String?
     let profilePhoto: [String]?
     let email: String
@@ -18,5 +17,5 @@ struct Profile: Codable, Equatable, Hashable {
 }
 
 var profiles = [
-    Profile(username: "Sample User", age: 19, preference: "Mens Hair", hairStyle: "Mens, 1C", profilePhoto: ["xbox.logo"], email: "abc123@cornell.edu", phoneNumber: "(123) 456-7890")
+    Profile(username: "Sample User", age: 19, hairStyle: "Mens, 1C", profilePhoto: [""], email: "abc123@cornell.edu", phoneNumber: "(123) 456-7890")
 ]
